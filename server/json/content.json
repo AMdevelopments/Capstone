@@ -1,0 +1,42 @@
+{
+  "navbar": {
+    "logo": "Italian Restaurant",
+    "links": [
+      { "label": "Menu", "url": "/menu" },
+      { "label": "Cart", "url": "/cart" },
+      { "label": "Make Reservation", "url": "/reservation" },
+      { "label": "About Us", "url": "/about" },
+      { "label": "Order Details", "url": "/order" }
+    ]
+  },
+  "hero": {
+    "title": "Welcome to Our Italian Restaurant",
+    "description": "Enjoy the real taste of Italy in every bite.",
+    "cta": { "label": "View Menu", "url": "/menu" }
+  },
+  "actionSection": {
+    "actions": [
+      { "title": "Menu", "cta": { "label": "View Menu", "url": "/menu" } },
+      {
+        "title": "Make Reservation",
+        "cta": { "label": "Reserve a Table", "url": "/reservation" }
+      },
+      {
+        "title": "Order Online",
+        "cta": { "label": "Start Order", "url": "/order" }
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Our restaurant was founded with the goal of bringing authentic Italian cuisine to our town. With a team of dedicated chefs and a cozy ambiance, we hope to provide an unforgettable dining experience for all our guests."
+  },
+  "footer": {
+    "copyright": "© 2023 Italian Restaurant. All Rights Reserved.",
+    "links": [
+      { "label": "Privacy Policy", "url": "/privacy-policy" },
+      { "label": "Terms of Use", "url": "/terms-of-use" },
+      { "label": "Contact Us", "url": "/contact" }
+    ]
+  }
+}

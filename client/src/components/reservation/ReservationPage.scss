@@ -1,0 +1,50 @@
+// ReservationPage.scss
+
+$reservation-background-color: #f9f6f2;
+$reservation-text-color: #3e3935;
+$reservation-button-color: #d27732;
+$reservation-button-text-color: #f9f6f2;
+
+.reservation-section {
+  background-color: $reservation-background-color;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: $reservation-text-color;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 10px;
+      color: $reservation-text-color;
+      font-size: 1em;
+    }
+
+    input,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid $reservation-text-color;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: $reservation-button-color;
+      color: $reservation-button-text-color;
+      cursor: pointer;
+      font-weight: bold;
+      border: none;
+    }
+  }
+}

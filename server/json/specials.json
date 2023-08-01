@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Lasagna",
+    "description": "Traditional lasagna with bolognese sauce",
+    "price": 15,
+    "image": "/images/Easiest-Lasagna-4.webp"
+  },
+  {
+    "id": 2,
+    "name": "Tiramisu",
+    "description": "Classic Italian dessert",
+    "price": 8,
+    "image": "/images/tiramasu.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Margherita Pizza",
+    "description": "Classic Margherita Pizza with fresh mozzarella and basil",
+    "price": 12,
+    "image": "/images/marg-pizza.webp"
+  }
+]

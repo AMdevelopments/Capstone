@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Bruschetta",
+    "description": "Grilled bread topped with diced tomatoes, garlic and basil",
+    "price": 7,
+    "image": "/images/bruschetta.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Caprese Salad",
+    "description": "Sliced fresh mozzarella, tomatoes, and sweet basil, seasoned with salt and olive oil",
+    "price": 9,
+    "image": "/images/Caprese-Salad.webp"
+  },
+  {
+    "id": 3,
+    "name": "Pasta Carbonara",
+    "description": "Italian pasta dish from Rome made with egg, hard cheese, cured pork, and black pepper",
+    "price": 14,
+    "image": "/images/Pasta-Carbonara.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Pasta Bolognese",
+    "description": "A large pasta tube stuffed with a blend of soft cheese",
+    "price": 15,
+    "image": "/images/Pasta-Bolognese.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tiramisu",
+    "description": "Classic Italian dessert",
+    "price": 8,
+    "image": "/images/tiramasu.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Margherita Pizza",
+    "description": "Classic Margherita Pizza with fresh mozzarella and basil",
+    "price": 12,
+    "image": "/images/marg-pizza.webp"
+  },
+  {
+    "id": 7,
+    "name": "Pesto Pasta",
+    "description": "Pasta in a rich basil pesto sauce",
+    "price": 12,
+    "image": "/images/pesto-pasta.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Panna Cotta",
+    "description": "Italian dessert of sweetened cream thickened with gelatin and molded",
+    "price": 6,
+    "image": "/images/Panna-Cotta.webp"
+  },
+  {
+    "id": 9,
+    "name": "Lasagna",
+    "description": "Traditional lasagna with bolognese sauce",
+    "price": 15,
+    "image": "/images/Easiest-Lasagna-4.webp"
+  },
+  {
+    "id": 10,
+    "name": "Spaghetti Aglio e Olio",
+    "description": "Classic Italian spaghetti with garlic and oil",
+    "price": 10,
+    "image": "/images/Spaghetti-Aglio-e-Olio.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Risotto",
+    "description": "Creamy Italian risotto with parmesan cheese",
+    "price": 14,
+    "image": "/images/risotto.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Chicken Parmesan",
+    "description": "Classic Chicken Parmesan with mozzarella served over pasta",
+    "price": 16,
+    "image": "/images/Chicken-Parmesan.webp"
+  }
+]

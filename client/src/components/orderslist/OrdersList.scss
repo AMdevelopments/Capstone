@@ -1,0 +1,38 @@
+//OrdersList.scss
+// _variables.scss
+$primary-color: #FF6347; // Tomato
+$secondary-color: #F8F9FA; // Light grey
+$tertiary-color: #343A40; // Dark grey
+$card-background: #f9f6f2;
+$card-border: #d27732;
+
+.orders-list {
+  .order-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .order-card {
+      background: $card-background;
+      border: 1px solid $card-border;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      width: calc(50% - 10px);
+      padding: 10px;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+
+        &:hover {
+          color: $tertiary-color;
+        }
+      }
+    }
+  }
+}
