@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './OrdersList.scss'
+import Footer from '../footer/Footer';
 
 const OrdersList = () => {
   const [orders, setOrders] = useState([]);
@@ -18,27 +19,31 @@ const OrdersList = () => {
   }, []);
 
   return (
-    <div className="orders-list">
-      <h2>All Orders</h2>
-      {orders.length > 0 ? (
-        <div className="order-cards">
-          {orders.map((order) => (
-            <div className="order-card" key={order.id}>
-              <Link to={`/order/${order.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <p><strong>Order #{order.id}</strong></p>
-                <p>Status: {order.status}</p>
-                <p>Total: ${order.total}</p>
-              </Link>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <p>No orders found.</p>
-      )}
-    </div>
+    <>
+      <div className="orders-list">
+        <h2>All Orders</h2>
+        {orders.length > 0 ? (
+          <div className="order-cards">
+            {orders.map((order) => (
+              <div className="order-card" key={order.id}>
+                <Link to={`/order/${order.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <p><strong>Order #{order.id}</strong></p>
+                  <p>Status: {order.status}</p>
+                  <p>Total: ${order.total}</p>
+                </Link>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p>No orders found.</p>
+        )}
+      </div>
+      <Footer /> {/* Footer component added */}
+    </>
   );
 };
 
 export default OrdersList;
+
 
 

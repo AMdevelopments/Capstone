@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import './Specials.scss';
 
-const SpecialsSection = () => {
+const SpecialsSection = ({ cart, setCart }) => { // get cart and setCart as props
   const [specials, setSpecials] = useState([]);
 
   useEffect(() => {
@@ -11,6 +11,10 @@ const SpecialsSection = () => {
       .then((data) => setSpecials(data))
       .catch((error) => console.log(error));
   }, []);
+
+  const addToCart = (item) => {
+    setCart(oldCart => [...oldCart, item]); // use a callback to ensure we have the latest cart state
+  };
 
   return (
     <section className="specials-section">
@@ -23,6 +27,7 @@ const SpecialsSection = () => {
               <h3>{item.name}</h3>
               <p>{item.description}</p>
               <p className="price">Price: ${item.price}</p>
+              <button className="addToCartBtn" onClick={() => addToCart(item)}>Add to Cart</button>
             </div>
           </div>
         ))}
@@ -32,6 +37,9 @@ const SpecialsSection = () => {
 };
 
 export default SpecialsSection;
+
+
+
 
 
 

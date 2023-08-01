@@ -20,13 +20,13 @@ function App() {
     <Router>
       <Navbar cart={cart} />
       <Routes>
-        <Route path="/" element={<><Hero /><ActionSection /><SpecialsSection /><Footer /></>} />
+        <Route path="/" element={<><Hero /><ActionSection /><SpecialsSection cart={cart} setCart={setCart} /><Footer /></>} />
         <Route path="/menu" element={<MenuPage setCart={setCart} />} />
         <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
         <Route path="/reservation" element={<ReservationPage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/order" element={<OrdersList />} />  // Move this line up
-        <Route path="/order/:id" element={<OrderDetails />} /> // Move this line down
+        <Route path="/order" element={<OrdersList />} /> // Moved up
+        <Route path="/order/:id" element={<OrderDetails />} /> // Moved down
         <Route path="*" element={<div>Not Found</div>} />
       </Routes>
     </Router>
@@ -34,6 +34,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 

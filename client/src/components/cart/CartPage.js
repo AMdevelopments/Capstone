@@ -1,11 +1,12 @@
 // CartPage.js
 import React, { useState } from 'react';
+import Footer from '../footer/Footer';
 import { useNavigate } from 'react-router-dom';  
 import axios from 'axios';
 import './CartPage.scss';
 
 const CartPage = ({ cart, setCart }) => {
-  const [delivery, setDelivery] = useState(false); // false represents pickup, true represents delivery
+  const [delivery, setDelivery] = useState(false);
   const [orderConfirmed, setOrderConfirmed] = useState(false);
   const navigate = useNavigate(); 
 
@@ -22,7 +23,7 @@ const CartPage = ({ cart, setCart }) => {
       status: 'Processing'
     }).then(response => {
       console.log(response.data);
-      navigate(`/order/${response.data.orderId}`); // navigate to the order details page with the id of the order
+      navigate(`/order/${response.data.orderId}`);
     }).catch(error => {
       console.error(error);
     });
@@ -33,42 +34,46 @@ const CartPage = ({ cart, setCart }) => {
   };
 
   return (
-    <section className="cart-section">
-      <h2>Your Cart</h2>
-      {orderConfirmed ? (
-        <p>Your order is confirmed!</p>
-      ) : (
-        <>
-          {cart.map((item, index) => (
-            <div className="cart-card" key={index}>
-              <img src={item.image} alt={item.name} />
-              <div className="content">
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
-                <p>Price: ${item.price}</p>
-                <button onClick={() => removeFromCart(item)}>Remove from Cart</button>
+    <>
+      <section className="cart-section">
+        <h2>Your Cart</h2>
+        {orderConfirmed ? (
+          <p>Your order is confirmed!</p>
+        ) : (
+          <>
+            {cart.map((item, index) => (
+              <div className="cart-card" key={index}>
+                <img src={item.image} alt={item.name} />
+                <div className="content">
+                  <h3>{item.name}</h3>
+                  <p>{item.description}</p>
+                  <p>Price: ${item.price}</p>
+                  <button onClick={() => removeFromCart(item)}>Remove from Cart</button>
+                </div>
               </div>
+            ))}
+            <p>Total: ${totalAmount}</p>
+            <div>
+              <label>
+                <input type="radio" value="Pickup" checked={!delivery} onChange={() => setDelivery(false)} />
+                Pickup
+              </label>
+              <label>
+                <input type="radio" value="Delivery" checked={delivery} onChange={() => setDelivery(true)} />
+                Delivery
+              </label>
             </div>
-          ))}
-          <p>Total: ${totalAmount}</p>
-          <div>
-            <label>
-              <input type="radio" value="Pickup" checked={!delivery} onChange={() => setDelivery(false)} />
-              Pickup
-            </label>
-            <label>
-              <input type="radio" value="Delivery" checked={delivery} onChange={() => setDelivery(true)} />
-              Delivery
-            </label>
-          </div>
-          <button onClick={confirmPurchase}>Confirm Purchase</button>
-        </>
-      )}
-    </section>
+            <button onClick={confirmPurchase}>Confirm Purchase</button>
+          </>
+        )}
+      </section>
+      <Footer />
+    </>
   );
 };
 
 export default CartPage;
+
 
 
 

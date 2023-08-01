@@ -1,7 +1,9 @@
 // About.js
 import React, { useEffect, useState } from 'react';
+import Footer from '../footer/Footer';
 import axios from 'axios';
 import './About.scss';  
+
 
 function About() {
   const [aboutContent, setAboutContent] = useState(null);
@@ -16,12 +18,16 @@ function About() {
   if (!aboutContent) return null;
 
   return (
-    <div className="about-content">
-      <h1>{aboutContent.title}</h1>
-      <p>{aboutContent.content}</p>
-    </div>
+    <>
+      <div className="about-content">
+        <h1>{aboutContent.title}</h1>
+        <p>{aboutContent.content}</p>
+      </div>
+      <Footer />
+    </>
   );
 }
 
 export default About;
+
 
