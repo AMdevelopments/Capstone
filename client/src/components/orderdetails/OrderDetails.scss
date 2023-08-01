@@ -1,9 +1,9 @@
 // OrderDetails.scss
 @import '../styles/sharedStyles.scss';
 // _variables.scss
-$primary-color: #FF6347; // Tomato
-$secondary-color: #F8F9FA; // Light grey
-$tertiary-color: #343A40; // Dark grey
+$primary-color: #FF6347;
+$secondary-color: #F8F9FA;
+$tertiary-color: #343A40;
 $card-background: #f9f6f2;
 $card-border: #d27732;
 
@@ -12,15 +12,15 @@ $card-border: #d27732;
     background: $card-background;
     border: 1px solid $card-border;
     border-radius: 5px;
-    padding: 20px;
+    padding: 1.25rem;
 
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
     }
 
     .order-item {
-      margin-bottom: 20px;
-      padding: 10px;
+      margin-bottom: 1.25rem;
+      padding: 0.625rem;
       border-bottom: 1px dashed $tertiary-color;
 
       &:last-child {
@@ -29,8 +29,9 @@ $card-border: #d27732;
     }
 
     .order-total {
-      margin-top: 20px;
+      margin-top: 1.25rem;
       font-weight: bold;
     }
   }
 }
+

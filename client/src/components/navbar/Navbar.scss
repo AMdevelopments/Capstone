@@ -1,44 +1,62 @@
 // Navbar.scss
+$navbar-bg-color: #8b4513;
+$navbar-color: #fff;
+$navbar-hover-color: #ff6347;
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; // This will align navbar title and navbar options
-    padding: 20px;
-    background-color: #8b4513; // Sicilian sand color
-    color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: $navbar-bg-color;
+  color: $navbar-color;
+
+  @media (max-width: 1279px) {
+    flex-direction: column;
+  }
 }
 
 .navbar__logo {
-    font-size: 2em;
-    font-family: 'Italiana', serif; // apply Italiana font
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+  font-size: 2rem;
+  font-family: 'Italiana', serif;
+  color: $navbar-color;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 
-    &:hover {
-        color: #ff6347; // Italian flag green color
-    }
+  &:hover {
+    color: $navbar-hover-color;
+  }
 }
 
 .navbar__links {
-    list-style: none;
-    display: flex; // This will make navbar options horizontally aligned
-    align-items: center; // This will align navbar options
+  list-style: none;
+  display: flex;
+  align-items: center;
 
-    li {
-        margin-left: 20px;
+  li {
+    margin-left: 1.25rem;
 
-        a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
+    a {
+      color: $navbar-color;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
 
-            &:hover {
-                color: #ff6347; // Italian flag green color
-            }
-        }
+      &:hover {
+        color: $navbar-hover-color;
+      }
     }
+  }
+
+  @media (max-width: 1279px) {
+    flex-direction: column;
+    li {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }
 }
+
+
 
 
   

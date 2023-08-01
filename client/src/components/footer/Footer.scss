@@ -1,61 +1,149 @@
 // Footer.scss
+$footer-bg-color: #f8f9fa;
+$footer-input-border-color: #ccc;
+$button-bg-color: #007bff;
+$button-hover-bg-color: #0056b3;
+
 .footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    
-    .newsletter {
-      flex: 1 0 300px;
-  
-      h2 {
-        margin-bottom: 10px;
-      }
-  
-      .input-group {
-        display: flex;
-  
-        input {
-          flex: 1;
-          padding: 10px;
-          margin-right: 10px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-        }
-  
-        button {
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-  
-          &:hover {
-            background-color: #0056b3;
-          }
-        }
-      }
+  background-color: $footer-bg-color;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .newsletter {
+    flex: 1 0 18.75rem;
+
+    h2 {
+      margin-bottom: 0.625rem;
     }
-  
-    p {
-      margin: 0;
-    }
-  
-    .footer-links {
+
+    .input-group {
       display: flex;
-      list-style-type: none;
-      padding: 0;
-  
-      li {
-        margin-right: 10px;
-  
-        &:last-child {
-          margin-right: 0;
+
+      input {
+        flex: 1;
+        padding: 0.625rem;
+        margin-right: 0.625rem;
+        border-radius: 4px;
+        border: 1px solid $footer-input-border-color;
+      }
+
+      button {
+        padding: 0.625rem 1.25rem;
+        background-color: $button-bg-color;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $button-hover-bg-color;
         }
       }
     }
   }
-  
+
+  p {
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-right: 0.625rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 1rem;
+
+    .newsletter {
+      h2 {
+        font-size: 1rem;
+      }
+
+      .input-group {
+        input {
+          padding: 0.5rem;
+        }
+
+        button {
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+
+    .footer-links {
+      li {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer {
+    padding: 1.5rem;
+
+    .newsletter {
+      h2 {
+        font-size: 1.125rem;
+      }
+
+      .input-group {
+        input {
+          padding: 0.75rem;
+        }
+
+        button {
+          padding: 0.75rem 1.5rem;
+        }
+      }
+    }
+
+    .footer-links {
+      li {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 1.25rem;
+
+    .newsletter {
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .input-group {
+        input {
+          padding: 0.625rem;
+        }
+
+        button {
+          padding: 0.625rem 1.25rem;
+        }
+      }
+    }
+
+    .footer-links {
+      li {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,4 +1,9 @@
 //Hero.scss
+$hero-content-bg-color: rgba(51, 51, 51, 0.7);
+$hero-content-color: #fff;
+$cta-bg-color: #8b4513;
+$cta-hover-bg-color: #ff6347;
+
 .hero {
   height: 80vh;
   background-image: url('../../assets/images/italianfood-hero.avif');
@@ -8,39 +13,105 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; // Add this
-  z-index: 1; // Add this
- 
+  position: relative;
+  z-index: 1;
 
   &__content {
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(51, 51, 51, 0.7); // This line creates a semi-transparent background box
-    border-radius: 15px; // This line makes the corners of the box slightly rounded
-    color: #fff;
+    padding: 1.25rem;
+    background-color: $hero-content-bg-color;
+    border-radius: 15px;
+    color: $hero-content-color;
     text-align: center;
-    
+
     h1 {
-      font-size: 3em;
+      font-size: 3rem;
     }
 
     p {
-      margin: 20px 0;
-      font-size: 1.5em;
+      margin: 1.25rem 0;
+      font-size: 1.5rem;
     }
   }
 
   &__cta {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #8b4513;
-    color: #fff;
+    padding: 0.625rem 1.25rem;
+    background-color: $cta-bg-color;
+    color: $hero-content-color;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
-      background-color: #ff6347;
+      background-color: $cta-hover-bg-color;
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .hero {
+    height: 60vh;
+
+    &__content {
+      padding: 1rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &__cta {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero {
+    height: 70vh;
+
+    &__content {
+      padding: 1.5rem;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+
+    &__cta {
+      padding: 0.75rem 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 80vh;
+
+    &__content {
+      padding: 1.25rem;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__cta {
+      padding: 0.625rem 1.25rem;
+    }
+  }
+}
+

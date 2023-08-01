@@ -1,8 +1,8 @@
 //OrdersList.scss
 // _variables.scss
-$primary-color: #FF6347; // Tomato
-$secondary-color: #F8F9FA; // Light grey
-$tertiary-color: #343A40; // Dark grey
+$primary-color: #FF6347;
+$secondary-color: #F8F9FA;
+$tertiary-color: #343A40;
 $card-background: #f9f6f2;
 $card-border: #d27732;
 
@@ -11,14 +11,14 @@ $card-border: #d27732;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     .order-card {
       background: $card-background;
       border: 1px solid $card-border;
       border-radius: 5px;
-      margin-bottom: 20px;
-      width: calc(50% - 10px);
-      padding: 10px;
+      margin-bottom: 1.25rem;
+      width: calc(50% - 0.625rem);
+      padding: 0.625rem;
 
       p {
         margin: 0;
@@ -36,3 +36,4 @@ $card-border: #d27732;
     }
   }
 }
+
