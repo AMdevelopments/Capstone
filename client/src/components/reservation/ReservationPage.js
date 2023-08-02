@@ -4,12 +4,14 @@ import Footer from '../footer/Footer';
 import './ReservationPage.scss';  
 
 const ReservationPage = () => {
-  const [reservationDetails, setReservationDetails] = useState({
+  const initialReservationDetails = {
     name: '',
     phone: '',
     numberOfGuests: '',
     dateTime: '',
-  });
+  };
+
+  const [reservationDetails, setReservationDetails] = useState(initialReservationDetails);
 
   const handleInputChange = (e) => {
     setReservationDetails({
@@ -30,6 +32,8 @@ const ReservationPage = () => {
       });
       if (!response.ok) throw new Error('Response not OK');
       alert(`Reservation made successfully for ${reservationDetails.dateTime}`);
+      setReservationDetails(initialReservationDetails); // Reset the reservation details after successful submission
+      window.location.reload(); // This line reloads the page
     } catch (error) {
       console.error('Failed to make reservation', error);
       alert('Reservation failed');
@@ -90,6 +94,7 @@ const ReservationPage = () => {
 };
 
 export default ReservationPage;
+
 
 
 
