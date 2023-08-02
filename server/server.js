@@ -53,6 +53,34 @@ app.post('/api/order', (req, res) => {
   res.json({message: "Order received", orderId: order.id});  // Return the id of the order
 });
 
+// New Section for Reservation
+let reservationsPath = path.join(__dirname, 'json', 'reservations.json');
+let reservations = [];
+
+try {
+  const rawData = fs.readFileSync(reservationsPath, 'utf8');
+  if(rawData){
+    reservations = JSON.parse(rawData);
+  }
+} catch (e) {
+  console.error('Error reading reservations:', e);
+}
+
+app.post('/api/reservation', (req, res) => {
+  const reservation = req.body;
+  reservation.id = reservations.length + 1;
+  reservations.push(reservation);
+  try {
+    fs.writeFileSync(reservationsPath, JSON.stringify(reservations));
+    res.json({message: "Reservation received", reservationId: reservation.id});
+  } catch (e) {
+    console.error('Error writing reservations:', e);
+    res.status(500).json({message: "Error writing reservation data."});
+  }
+});
+
+// End of new Section
+
 // Get request to fetch the details of all orders from the server
 app.get('/api/order', (req, res) => {
   if (orders.length === 0){
@@ -100,6 +128,8 @@ app.get('/api/latest-order/:id', (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
+
+
 
 
 

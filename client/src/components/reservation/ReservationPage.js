@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Footer from '../footer/Footer';
 import './ReservationPage.scss';  
 
-
 const ReservationPage = () => {
   const [reservationDetails, setReservationDetails] = useState({
     name: '',
@@ -19,9 +18,22 @@ const ReservationPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(reservationDetails);
+    try {
+      const response = await fetch('/api/reservation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(reservationDetails),
+      });
+      if (!response.ok) throw new Error('Response not OK');
+      alert(`Reservation made successfully for ${reservationDetails.dateTime}`);
+    } catch (error) {
+      console.error('Failed to make reservation', error);
+      alert('Reservation failed');
+    }
   };
 
   return (
@@ -78,5 +90,6 @@ const ReservationPage = () => {
 };
 
 export default ReservationPage;
+
 
 
