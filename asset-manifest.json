@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Capstone/static/css/main.3b9d7631.css",
+    "main.js": "/Capstone/static/js/main.634db926.js",
+    "static/media/italian-car.jpg": "/Capstone/static/media/italian-car.64ca261e31974416e1e8.jpg",
+    "static/media/italianfood-hero.avif": "/Capstone/static/media/italianfood-hero.d39d2ef91881ed246341.avif",
+    "index.html": "/Capstone/index.html",
+    "main.3b9d7631.css.map": "/Capstone/static/css/main.3b9d7631.css.map",
+    "main.634db926.js.map": "/Capstone/static/js/main.634db926.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b9d7631.css",
+    "static/js/main.634db926.js"
+  ]
+}
